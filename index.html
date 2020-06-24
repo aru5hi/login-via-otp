@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AdmitKard</title>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" async>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://kit.fontawesome.com/01dac07d9d.js" crossorigin="anonymous" async></script>
+	<script type="text/javascript" src="index.js"></script>
+	
+</head>
+<body>
+	<div class="container-1">
+
+		<img src="assets/logo.png" class="logo">
+		<p class="main-head">Welcome to AdmitKard</p>
+		<h3 class="sub-head">Please sign into your account</h3>
+		<form class="form-group">
+			<label>Enter Contact Number</label>
+			<input type="tel" name="mobile" class="mobile" id="mobile" oninput="validateNumber()">
+			<p id="alert"></p>
+			<p class="sub-label">We will send you a one time SMS message.<br> Charges may apply.</p>
+			<a href="verify.html" id="submit" class="submit-button" onclick="return sendOTP()">Sign in with OTP <i class="fas fa-arrow-circle-right"></i></a>
+
+		</form>
+	</div>
+	<div class="container-2">
+		<img src="assets/side-image.jpg" class="image">
+	</div>
+</body>
+</html>
+

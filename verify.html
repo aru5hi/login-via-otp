@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AdmitKard-Verify Number</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/01dac07d9d.js" crossorigin="anonymous" async></script>
+
+	<script type="text/javascript" src="index.js"></script>
+	<style type="text/css">
+		.container-1{
+			position:absolute;
+			width:50%;
+			text-align: center;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.logo{
+			position:absolute;
+			left:0;
+			height:40px;
+			width:150px;
+			padding:20px;
+			text-align:left;
+
+		}
+		.image{
+			position:relative;
+			width:600px;
+			height:500px;
+			top:100px;
+		}
+		.container-2{
+			position:absolute;
+			top:150px;
+			width:50%;
+			left:600px;
+			text-align:center;
+		}
+		.sub-head{
+			margin-bottom:60px;
+			font-family: 'Montserrat', sans-serif;
+			color:black;
+		}
+		.sub-label{
+			position: relative;
+			font-family: 'Montserrat', sans-serif;
+			font-size:12px;
+			top:20px;
+			color:#777;
+			font-weight: 600
+		}
+		.otp{
+			position:relative;
+			width:30%;
+			padding:15px;
+			border:1px solid #10a5f5;
+			border-radius:20px;
+			text-align:center;
+		}
+		::placeholder{
+			color:#aaa;
+			font-style:italic;
+		}
+		.btn{
+			position: relative;
+			top:40px;
+			color:white;
+			border:1px solid #10a5f5;
+			background-color: #10a5f5;
+			border-radius:30px;
+			width:25%;
+			padding: 15px;
+			font-size:15px;
+			font-weight:bold;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.btn:hover{
+			color:#10a5f5;
+			background:white;
+		}
+		.fas{
+			position:relative;
+			left:15px;
+			font-size:20px;
+		}
+		#alert{
+			color:red;
+			font-size:15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-1">
+		<img src="assets/logo.png" class="logo">
+		<img src="assets/notif-2.png" class="image">
+	</div>
+	<div class="container-2">
+	<h2 class="sub-head">Please verify the OTP to login</h2>
+	<form>
+		<input type="number" max="9999" min="1000" placeholder="Enter the OTP" class="otp" id="otp" oninput="validateOTP()">
+		<p id="alert"></p>
+		<p class="sub-label">Please enter the OTP you have recieved on <br>your registered mobile number</p>
+		<button class="btn" onclick="return verifyOTP()">Verify OTP <i class="fas fa-user-check"></i></button>
+	</form>
+	</div>
+</body>
+</html>
